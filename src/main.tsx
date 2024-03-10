@@ -5,7 +5,7 @@ import { QueryClientProvider } from 'react-query';
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from './routes';
 import queryClient from './shared/services/queryClient';
-import { ErrorMessage } from './shared/components/ErrorMessage/ErrorMessage';
+import { GlobalLoading } from './shared/components/GlobalLoading';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <QueryClientProvider client={queryClient}>
         <CssBaseline />
         <Router />
-        <ErrorMessage />
+        <GlobalLoading />
       </QueryClientProvider>
     </React.StrictMode>
   </BrowserRouter>
