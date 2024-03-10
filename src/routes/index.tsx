@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import App from '../App';
 import { PrivateRoute } from '../shared/guards/PrivateRoute';
 import { Home } from '../pages';
-
 function Router() {
   return (
     <Routes>
