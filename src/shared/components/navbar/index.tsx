@@ -1,29 +1,47 @@
-import { Col, Row, Space } from 'antd';
+import { Flex } from 'antd';
 import { NavbarStyles } from './styles';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import LogoSvg from '../../../assets/cake-slice 1.svg';
+
 
 
 export function Navbar() {
-    const StyledLink = styled.a`
+    const StyledLink = styled(Link)`
         ${NavbarStyles.link}
     `;
-    const StyledLogo = styled.a`
+
+    const StyledLogo = styled(Link)`
         ${NavbarStyles.logo}
     `;
 
-    const StyledRoot = styled.div`
+    const StyledRoot = styled(Flex)`
         ${NavbarStyles.root}
     `;
-    const StyledLinks = styled.div`
+
+    const StyledLinks = styled(Flex)`
         ${NavbarStyles.links}
+    `;
+
+    const StyledLogoContainer = styled(Flex)`
+        ${NavbarStyles.logoContainer}
     `;
 
     return (
         <StyledRoot>
-            <StyledLogo href='#'>Logo</StyledLogo>
+            <StyledLogoContainer>
+                <StyledLogo to='/'>
+                    <img src={LogoSvg} alt='logo' />
+                </StyledLogo>
+                <StyledLink to='#'>Home</StyledLink>
+            </StyledLogoContainer>
             <StyledLinks>
-                <StyledLink href='#'>Home</StyledLink>
-                <StyledLink href='#'>About</StyledLink>
+                <StyledLink to='#'>Home</StyledLink>
+                <StyledLink to='#'>About</StyledLink>
+                <StyledLink to='#'>About</StyledLink>
+                <StyledLink to='#'>About</StyledLink>
+                <StyledLink to='#'>About</StyledLink>
+                <StyledLink to='#'>About</StyledLink>
             </StyledLinks>
         </StyledRoot>
     );
