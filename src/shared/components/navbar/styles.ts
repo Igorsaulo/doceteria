@@ -5,11 +5,11 @@ const NavbarStyles = {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
+        padding: 2rem;
         background-color: transparent;
         position: fixed;
         width: 100%;
-        gap: 5rem;
+        gap: 10rem;
         z-index: 100;
         top: 20;
         left: 50%;
@@ -29,12 +29,13 @@ const NavbarStyles = {
     `,
     links: css`
         display: flex;
-        gap: 2.5rem;
+        gap: 5rem;
     `,
     link: css`
         color: #000;
         text-decoration: none;
         font-weight: 500;
+        color: #fff;
     `,
     logoContainer: css`
         display: flex;
